@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Date Library Project.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clsDate.h" />
+    <ClInclude Include="clsString.h" />
+    <ClInclude Include="clsPeriod.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

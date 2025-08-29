@@ -1,20 +1,38 @@
-// Date Library Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
+#pragma warning(disable : 4996)
+#include "clsString.h"
+#include "clsDate.h"
+#include "clsPeriod.h";
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    
+
+    clsDate Date1;
+    Date1.Print();
+
+    clsDate Date2("31/1/2022");
+    Date2.Print();
+
+    Date2.IncreaseDateByOneWeek();
+    Date2.Print();
+
+    
+
+    clsDate Date3(20, 12, 2022);
+    Date3.Print();
+
+    Date3.IncreaseDateByOneWeek();
+    Date3.Print();
+
+    clsPeriod Period1(clsDate(20, 10, 2024), clsDate(30, 12, 2025));
+    clsPeriod Period2(clsDate(15, 10, 2025), clsDate(2, 7, 2026));
+
+    cout << clsPeriod::IsOverlapPeriods(Period1, Period2) << endl;
+    
+    cout << Period1.IsOverLapWith(Period2) << endl;
+
+    
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
